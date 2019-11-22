@@ -1,0 +1,13 @@
+title: Last Stair Creative
+email: contact@laststair.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Not business as usual.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://laststair.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: laststairhq
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-feed

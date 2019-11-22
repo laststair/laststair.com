@@ -1,0 +1,135 @@
+.masthead {
+  background: linear-gradient(180deg, #0072ff, #00c6ff);
+  height: 100vh;
+  color: white;
+
+  .contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3em;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+
+    @media (max-width: $breakpoint) {
+      font-size: 2em;
+      width: 80%;
+    }
+  }
+
+  p {
+    width: 50%;
+    margin: 0 auto 10px auto;
+    text-align: center;
+
+    @media (max-width: $breakpoint) {
+      width: 80%;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p.lead-in {
+    font-size: 2em;
+
+    @media (max-width: $breakpoint) {
+      font-size: 1.2em;
+      width: 80%;
+    }
+  }
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.brand {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+
+  a, a:visited {
+    color: $primary;
+    text-decoration: none;
+    opacity: 0.9;
+    font-size: 1.3em;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    span {
+      color: $text;
+    }
+  }
+}
+
+.button, button {
+  border-width: 0;
+  border-bottom: 2px solid lighten($primary, 15%);
+  background: $primary;
+  font-size: $font-size;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 28px;
+
+  &:hover {
+    background: lighten($primary, 5%);
+  }
+
+  &:after {
+    content: ' ›';
+  }
+}
+
+@keyframes move {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+.prelaunch-bar {
+  border: 0px solid $primary;
+  padding: 2px;
+  height: 25px;
+  background: darken($fade, 5%);
+  // border-radius: 13px;
+
+  .prelaunch-bar-progress {
+    height: 100%;
+    display: block;
+    border-bottom: 1px solid white;
+    background-size: 50px 50px;
+    background-color: $primary;
+    animation: move 2s linear infinite;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, .2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, .2) 50%,
+      rgba(255, 255, 255, .2) 75%,
+      transparent 75%,
+      transparent
+    );
+    // border-radius: 13px;
+    // border-end-end-radius: 2px;
+    // border-start-end-radius: 2px;
+  }
+}
